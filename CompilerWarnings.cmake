@@ -49,7 +49,7 @@ function(set_project_warnings project_name)
     set(MSVC_WARNINGS ${MSVC_WARNINGS} /WX)
   endif()
 
-  set(GCC_WARNINGS ${CLANG_WARNINGS})
+  set(GCC_WARNINGS ${CLANG_WARNINGS} -Wno-nonnull-compare)
 
   if(MSVC)
     set(PROJECT_WARNINGS ${MSVC_WARNINGS})
